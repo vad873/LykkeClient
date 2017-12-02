@@ -48,7 +48,7 @@
     <Compile Include="Entities\IsAliveResponse.cs" />
     <Compile Include="Entities\IssueIndicator.cs" />
     <Compile Include="Entities\Order.cs" />
-    <Compile Include="Entities\OrderBook.cs" />
+    <Compile Include="Entities\OrderBookEntry.cs" />
     <Compile Include="Entities\OrderStatus.cs" />
     <Compile Include="Entities\PriceValue.cs" />
     <Compile Include="Entities\WalletBalance.cs" />

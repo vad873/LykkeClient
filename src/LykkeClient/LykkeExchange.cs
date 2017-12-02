@@ -13,6 +13,7 @@ namespace LykkeClient
 		private readonly string _orderLimitResource = "Orders/limit";
 		private readonly string _orderMarketResource = "Orders/market";
 		private readonly string _orderBookResource = "OrderBooks";
+		private readonly string _specificOrderBook = "OrderBooks/{assetPairId}";
 		private readonly string _orderStatusResource = "Orders";
 		private readonly string _specificOrderStatusResource = "Orders/{id}";
 		private readonly string _orderCancellationResource = "Order/{id}/Cancel";
@@ -46,15 +47,16 @@ namespace LykkeClient
 			return PerformRequest<AssetPair>(request);
 		}
 
-		public Task<List<OrderBook>> GetOrderBooks()
+		public Task<List<OrderBookEntry>> GetOrderBooks()
 		{
-			return PerformGetRequest<List<OrderBook>>(_orderBookResource);
+			return PerformGetRequest<List<OrderBookEntry>>(_orderBookResource);
 		}
 
-		public Task<OrderBook> GetOrderBook(string assetPairId)
+		public Task<List<OrderBookEntry>> GetOrderBook(string assetPairId)
 		{
-			var resource = _orderBookResource + "/" + assetPairId;
-			return PerformGetRequest<OrderBook>(resource);
+			var request = new RestRequest(_specificOrderBook, Method.GET);
+			request.AddParameter("assetPairId", assetPairId, ParameterType.UrlSegment);
+			return PerformRequest<List<OrderBookEntry>>(request);
 		}
 
 		public Task<IsAliveResponse> IsAlive()

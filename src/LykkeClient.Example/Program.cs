@@ -24,6 +24,8 @@ namespace LykkeClient.Example
 				Console.WriteLine(pair.Name);
 			}
 
+			var orderBook = await publicClient.GetOrderBook(KnownAssetPairs.BTC_USD);
+
 			var assetPair = await publicClient.GetAssetPair(KnownAssetPairs.BTC_USD);
 			Console.WriteLine(assetPair.Name);
 

@@ -3,7 +3,7 @@ using System.Collections.Generic;
 
 namespace LykkeClient
 {
-	public class OrderBook
+	public class OrderBookEntry
 	{
 		public string AssetPair { get; set; }
 		public bool IsBuy { get; set; }

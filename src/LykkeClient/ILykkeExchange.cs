@@ -10,8 +10,8 @@ namespace LykkeClient
 		Task<IsAliveResponse> IsAlive();
 		Task<List<AssetPair>> GetAssetPairs();
 		Task<AssetPair> GetAssetPair(string assetPairId);
-		Task<List<OrderBook>> GetOrderBooks();
-		Task<OrderBook> GetOrderBook(string assetPairId);
+		Task<List<OrderBookEntry>> GetOrderBooks();
+		Task<List<OrderBookEntry>> GetOrderBook(string assetPairId);
 
 		#endregion
 

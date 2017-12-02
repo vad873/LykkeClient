@@ -5,7 +5,7 @@ using System.Threading.Tasks;
 
 namespace LykkeClient
 {
-	public class LykkeClient : ILykkeClient
+	public class LykkeExchange : ILykkeExchange
 	{
 		private readonly string _apiKey;
 		private readonly string _baseApiAddress = "https://hft-api.lykke.com/api";
@@ -22,9 +22,9 @@ namespace LykkeClient
 		private readonly string _specificAssetPairsResource = "AssetPairs/{assetPairId}";
 		private RestClient _client => new RestClient(_baseApiAddress);
 
-		public LykkeClient() {}
+		public LykkeExchange() {}
 
-		public LykkeClient(string apiKey)
+		public LykkeExchange(string apiKey)
 		{
 			Guard.IsNotNullOrWhiteSpace(apiKey, nameof(apiKey));
 

@@ -53,9 +53,9 @@
     <Compile Include="Entities\PriceValue.cs" />
     <Compile Include="Entities\WalletBalance.cs" />
     <Compile Include="Guard.cs" />
-    <Compile Include="ILykkeClient.cs" />
+    <Compile Include="ILykkeExchange.cs" />
     <Compile Include="KnownAssetPairs.cs" />
-    <Compile Include="LykkeClient.cs" />
+    <Compile Include="LykkeExchange.cs" />
     <Compile Include="LykkeException.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

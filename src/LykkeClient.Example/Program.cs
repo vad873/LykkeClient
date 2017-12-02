@@ -15,7 +15,7 @@ namespace LykkeClient.Example
 
 		static async Task Main()
 		{
-			var publicClient = new LykkeClient();
+			var publicClient = new LykkeExchange();
 
 			// public api methods
 			var pairs = await publicClient.GetAssetPairs();
@@ -29,7 +29,7 @@ namespace LykkeClient.Example
 
 			// private api methods
 			var apiKey = "XXX";
-			var privateClient = new LykkeClient(apiKey);
+			var privateClient = new LykkeExchange(apiKey);
 
 			var ordersStatus = await privateClient.GetOrdersStatus();
 			foreach (var status in ordersStatus)

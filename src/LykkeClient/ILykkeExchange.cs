@@ -3,7 +3,7 @@ using System.Threading.Tasks;
 
 namespace LykkeClient
 {
-	public interface ILykkeClient
+	public interface ILykkeExchange
 	{
 		#region Public API Methods
 

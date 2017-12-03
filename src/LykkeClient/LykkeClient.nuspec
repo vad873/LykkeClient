@@ -1,0 +1,17 @@
+<?xml version="1.0"?>
+<package >
+  <metadata>
+    <id>LykkeClient</id>
+    <version>$version$</version>
+    <title>LykkeClient</title>
+    <authors>Vadim Grayfer</authors>
+    <owners>Vadim Grayfer</owners>
+    <projectUrl>https://github.com/vad873/LykkeClient</projectUrl>
+	<licenseUrl>https://github.com/vad873/LykkeClient/blob/master/LICENSE</licenseUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <description>Simple client for Lykke, the crypto currencies exchange. https://lykke.com </description>
+    <releaseNotes></releaseNotes>
+    <copyright>Copyright 2017</copyright>
+    <tags>Lykke Crypto Cryptocurrency Exchange</tags>
+  </metadata>
+</package>

@@ -71,14 +71,15 @@ namespace LykkeClient
 
 		public Task<string> PlaceLimitOrder(Order order)
 		{
-			var request = new RestRequest(_orderLimitResource);
+			var request = new RestRequest(_orderLimitResource, Method.POST);
 			request.AddJsonBody(order);
+
 			return PerformRequest<string>(request, true);
 		}
 
 		public Task PlaceMarketOrder(Order order)
 		{
-			var request = new RestRequest(_orderMarketResource);
+			var request = new RestRequest(_orderMarketResource, Method.POST);
 			request.AddJsonBody(order);
 
 			return PerformRequest<Task>(request, shouldAddApiKey: true);
@@ -86,7 +87,7 @@ namespace LykkeClient
 
 		public Task CancelOrder(string orderId)
 		{
-			var request = new RestRequest(_orderCancellationResource);
+			var request = new RestRequest(_orderCancellationResource, Method.POST);
 			request.AddParameter("id", orderId, ParameterType.UrlSegment);
 
 			return PerformRequest<Task>(request, shouldAddApiKey: true);

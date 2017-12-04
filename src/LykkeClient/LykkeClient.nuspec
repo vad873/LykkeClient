@@ -2,7 +2,7 @@
 <package >
   <metadata>
     <id>LykkeClient</id>
-    <version>$version$</version>
+    <version>1.0.3</version>
     <title>LykkeClient</title>
     <authors>Vadim Grayfer</authors>
     <owners>Vadim Grayfer</owners>
@@ -13,5 +13,11 @@
     <releaseNotes></releaseNotes>
     <copyright>Copyright 2017</copyright>
     <tags>Lykke Crypto Cryptocurrency Exchange</tags>
+	<dependencies>
+		<dependency id="RestSharp" version="106.1.0" />
+	</dependencies>
   </metadata>
+  <files>
+		<file src="bin\Release\*.dll" target="lib\net461" />
+  </files>
 </package>

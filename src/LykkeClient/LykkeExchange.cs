@@ -71,7 +71,9 @@ namespace LykkeClient
 
 		public Task<string> PlaceLimitOrder(Order order)
 		{
-			return PerformPostRequest<string>(_orderLimitResource, true);
+			var request = new RestRequest(_orderLimitResource);
+			request.AddJsonBody(order);
+			return PerformRequest<string>(request, true);
 		}
 
 		public Task PlaceMarketOrder(Order order)
@@ -134,6 +136,7 @@ namespace LykkeClient
 		private async Task<T> PerformRequest<T>(Method method, string resource, bool shouldAddApiKey = false)
 		{
 			var request = new RestRequest(resource, method);
+
 			return await PerformRequest<T>(request, shouldAddApiKey);
 		}
 

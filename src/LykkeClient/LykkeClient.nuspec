@@ -2,8 +2,8 @@
 <package >
   <metadata>
     <id>LykkeClient</id>
-    <version>1.0.4</version>
-    <title>LykkeClient</title>
+    <version>2.0.0</version>
+    <title>LykkeClient</title>  
     <authors>Vadim Grayfer</authors>
     <owners>Vadim Grayfer</owners>
     <projectUrl>https://github.com/vad873/LykkeClient</projectUrl>
@@ -11,13 +11,13 @@
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <description>Simple client for Lykke, the crypto currencies exchange. https://lykke.com </description>
     <releaseNotes></releaseNotes>
-    <copyright>Copyright 2017</copyright>
+    <copyright>Copyright 2019</copyright>
     <tags>Lykke Crypto Cryptocurrency Exchange</tags>
 	<dependencies>
-		<dependency id="RestSharp" version="106.1.0" />
+		<dependency id="RestSharp" version="106.6.9" />
 	</dependencies>
   </metadata>
   <files>
-		<file src="bin\Release\*.dll" target="lib\net461" />
+		<file src="bin\Release\*.dll" target="lib\netstandard2.0" />
   </files>
 </package>
